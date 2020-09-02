@@ -343,7 +343,7 @@ location_geoclue2_init(location_geoclue2_state_t **state)
 #if !GLIB_CHECK_VERSION(2, 35, 0)
 	g_type_init();
 #endif
-	*state = malloc(sizeof(location_geoclue2_state_t));
+	*state = g_malloc0(sizeof(location_geoclue2_state_t));
 	if (*state == NULL) return -1;
 	return 0;
 }
